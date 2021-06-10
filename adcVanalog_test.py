@@ -5,15 +5,15 @@ from time import sleep
 import csv
 from ADS1248_AB import ADS1248
 import sys
-
+import board
 
 ## Initialize SPI
 pi = pigpio.pi()
 frq = 2*10**6
 spi = pi.spi_open(0, frq, 1)
 ## ADS1248 declarations
-ADS1248.setup(pi, spi, 17, frq) # (spi, drdy_pin)
-adc1 = ADS1248(8, 820)  # (cs_pin, Rref = 820 ohm) Define ADC1 objects
+ADS1248.setup(pi, spi, board.17, frq) # (spi, drdy_pin)
+adc1 = ADS1248(board.8, 820)  # (cs_pin, Rref = 820 ohm) Define ADC1 objects
 Vsupply = 5.2
 Pmax = 15
 Pmin = 0
@@ -26,7 +26,6 @@ while True:
     read_A4 = adc1.Read_5V_sensor(5)
     read_A5 = adc1.Read_5V_sensor(6)
     read_A6 = adc1.Read_5V_sensor(7)
-    read_A7 = adc1.Read_5V_sensor(8)
     #Pmeas = ((read_A0 - 0.1*Vsupply)*(Pmax-Pmin)/(0.8*Vsupply))+Pmin
     print ("A0  " + str(read_A0))
     print ("A1  " + str(read_A1))
