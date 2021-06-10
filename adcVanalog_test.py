@@ -5,15 +5,14 @@ from time import sleep
 import csv
 from ADS1248_AB import ADS1248
 import sys
-import board
 
 ## Initialize SPI
 pi = pigpio.pi()
 frq = 2*10**6
 spi = pi.spi_open(0, frq, 1)
 ## ADS1248 declarations
-ADS1248.setup(pi, spi, board.17, frq) # (spi, drdy_pin)
-adc1 = ADS1248(board.8, 820)  # (cs_pin, Rref = 820 ohm) Define ADC1 objects
+ADS1248.setup(pi, spi, 11, frq) # (spi, drdy_pin)
+adc1 = ADS1248(24, 820)  # (cs_pin, Rref = 820 ohm) Define ADC1 objects
 Vsupply = 5.2
 Pmax = 15
 Pmin = 0
