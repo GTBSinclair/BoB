@@ -1,6 +1,6 @@
 ####
 # Script: Gio S
-# Comments: Mat Z
+# Comments and corrections: Mat Z
 # NOT FOR FLIGHT USE - UNIT TESTING ONLY
 ####
 
@@ -18,7 +18,8 @@ i2c = board.I2C()
 
 ## MZ: First changes - following docs for this library
 ## Docs: https://circuitpython.readthedocs.io/projects/bme680/en/latest/api.html
-sensor = adafruit_bme680.Adafruit_BME680_I2C(i2c, 0x76, False, 2)	# No debug output, 2 readings per second (ensures change).
+##sensor = adafruit_bme680.Adafruit_BME680_I2C(i2c, 0x76, False, 2)	# No debug output, 2 readings per second (ensures change).
+sensor = adafruit_bme680.Adafruit_BME680_I2C(i2c, 0x76, refresh_rate = 2) # GS. Only takes two positional arguments
 sensor.sea_level_pressure = 1013.25		# Assumed for testing
 
 
