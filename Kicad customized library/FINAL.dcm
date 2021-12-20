@@ -1,0 +1,23 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 105309-1202
+D Molex Nano-Fit 105309, 2.5mm Pitch, 2 Way, 1 Row, Vertical PCB Header, Through Hole
+F https://www.molex.com/pdm_docs/sd/1053091202_sd.pdf
+$ENDCMP
+#
+$CMP 504050-1091
+D Pico-Lock SMT Wire-to-Board Header 10way Molex 504050 Series, 1.5mm Pitch 10 Way 1 Row Right Angle PCB Header, SMT Termination, 3A
+F http://docs-emea.rs-online.com/webdocs/127f/0900766b8127f169.pdf
+$ENDCMP
+#
+$CMP MCA1101-5-3
+D Board Mount Current Sensors
+F https://componentsearchengine.com/Datasheets/1/MCA1101-5-3.pdf
+$ENDCMP
+#
+$CMP SRN6045TA-150M
+D BOURNS - SRN6045TA-150M - INDUCTOR, AEC-Q200, 15UH, 2.8A, 20%
+F https://componentsearchengine.com/Datasheets/2/SRN6045TA-150M.pdf
+$ENDCMP
+#
+#End Doc Library
